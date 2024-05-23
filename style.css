@@ -1,0 +1,120 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    background-color: bisque;
+}
+section#timeline{
+    width: 80%;
+    height: 100%;
+    position: relative;
+     /* border: 1px solid black; */
+    margin: auto;
+}
+section#timeline::before{
+    content: '';
+    width: 3px;
+    height: 100%;
+    background-color: rgb(225, 31, 31);
+    position: absolute;
+    left: 50%;
+    animation-name: line;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+}
+.inner{
+    float: left;
+    width: 40%;
+    border: 2px solid red;
+    border-radius: 20% 0 20% 0;
+    padding: 20px;
+    background-color: beige;
+}
+.inner::after{
+    content: '';
+    position: absolute;
+    background-color: brown;
+    width: 80px;
+    height: 100px;
+    left:38%;
+    top: 0%;
+    rotate: -43deg;
+    z-index: -1;
+}
+section#timeline article::after{
+    content: '';
+    clear: both;
+    display: block;
+}
+.right{
+    float: right;
+    width: 40%;
+    border: 2px solid red;
+    border-radius: 20% 0 20% 0;
+    padding: 20px;
+    background-color: beige;
+}
+.inner1{
+    float: left;
+    width: 40%;
+    border: 2px solid red;
+    border-radius: 20% 0 20% 0;
+    padding: 20px;
+    background-color: beige;
+}
+.right1{
+    float: right;
+    width: 40%;
+    border: 2px solid red;
+    border-radius: 20% 0 20% 0;
+    padding: 20px;
+    background-color: beige;
+}
+.inner1::after{
+    content: '';
+    position: absolute;
+    background-color: brown;
+    width: 80px;
+    height: 100px;
+    left: 38%;
+    top: 350px;
+    rotate: -43deg;
+    z-index: -1;
+}
+.right::after{
+    content: '';
+    position: absolute;
+    background-color: brown;
+    width: 80px;
+    height: 100px;
+    right: 38%;
+    top: 200px;
+    rotate: -43deg;
+    z-index: -1;
+}
+.right1::after{
+    content: '';
+    position: absolute;
+    background-color: brown;
+    width: 80px;
+    height: 100px;
+    right: 38%;
+    top: 82%;
+    rotate: -43deg;
+    z-index: -1;
+}
+
+@keyframes line{
+    0%{
+        height: 0%;
+    }
+    50%{
+        height: 50%;
+    }
+    100%{
+        height: 100%;
+    }
+}
+
+
